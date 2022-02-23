@@ -4,9 +4,6 @@
     </a>
     <i class="fa fa-bars menu-toggle"></i>
     <ul class="nav">
-      <li><a href="<?php echo BASE_URL . '/' ?>">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="<?php echo BASE_URL . '/recipes.php' ?>">Recipes</a></li>
 
       <?php if (isset($_SESSION['id'])): ?>
         <li>
