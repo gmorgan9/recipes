@@ -20,14 +20,14 @@ adminOnly();
         <link href="https://fonts.googleapis.com/css?family=Candal|Lora"
             rel="stylesheet">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="/assets/images/fav.png">
-
         <!-- Custom Styling -->
         <link rel="stylesheet" href="../../assets/css/style.css?v=<?php echo time(); ?>">
 
         <!-- Admin Styling -->
         <link rel="stylesheet" href="../../assets/css/admin.css?v=<?php echo time(); ?>">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/assets/images/fav.png?v=<?php echo time(); ?>">
 
         <title>Admin Section - Add User</title>
     </head>
