@@ -3,7 +3,7 @@ session_start();
 require('connect.php');
 
 // connect to database update
-$db = mysqli_connect('localhost', 'gmorg', 'gmorgpass', 'doc');
+$db = mysqli_connect('localhost', 'gmorg', 'gmorgpass', 'recipes');
 
 // variable declaration
 $username = "";
