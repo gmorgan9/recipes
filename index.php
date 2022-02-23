@@ -30,7 +30,7 @@ if (isset($_GET['t_id'])) {
   <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/images/fav.png">
+  <link rel="icon" type="image/x-icon" href="/assets/images/fav.png?v=<?php echo time(); ?>">
 
   <!-- Custome Styles -->
   <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
