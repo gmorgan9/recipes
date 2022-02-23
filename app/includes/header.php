@@ -4,7 +4,10 @@
     </a>
     <i class="fa fa-bars menu-toggle"></i>
     <ul class="nav">
-
+    <?php if (strpos($_SERVER['SCRIPT_NAME'], 'login.php') !== false || strpos($_SERVER['SCRIPT_NAME'], 'register.php') !== false) { ?>
+      <li><a href="<?php echo BASE_URL . '/' ?>" class="logout">Home</a></li>
+        <?php } else { ?>
+        <?php } ?>
       <?php if (isset($_SESSION['id'])): ?>
         <li>
           <a href="#">
