@@ -109,7 +109,7 @@ if (isset($_GET['t_id'])) {
 
         <div class="section search">
           <h2 class="section-title">Search</h2>
-          <form action="kb.php" method="post">
+          <form action="recipes.php" method="post">
             <input type="text" name="search-term" class="text-input" placeholder="Search...">
           </form>
         </div>
@@ -119,7 +119,7 @@ if (isset($_GET['t_id'])) {
           <h2 class="section-title">Topics</h2>
           <ul>
             <?php foreach ($topics as $key => $topic): ?>
-              <li><a href="<?php echo BASE_URL . '/kb.php?t_id=' . $topic['id'] . '&name=' . $topic['name'] ?>"><?php echo $topic['name']; ?></a></li>
+              <li><a href="<?php echo BASE_URL . '/recipes.php?t_id=' . $topic['id'] . '&name=' . $topic['name'] ?>"><?php echo $topic['name']; ?></a></li>
             <?php endforeach; ?>
           </ul>
         </div>
