@@ -35,7 +35,7 @@ if (isset($_GET['t_id'])) {
   <!-- Custome Styles -->
   <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
 
-  <title>Documentation</title>
+  <title>Recipes</title>
 </head>
 <body>
 
