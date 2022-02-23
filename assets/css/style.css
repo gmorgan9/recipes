@@ -3,7 +3,7 @@
   --secondary-color: #92817A;
   --hover-color: #F1DABF;
   --backgroud: #F8F8FF;
-  --light-text: rgb(206, 206, 206);
+  --light-text: #fff;
   --red-background: #f2dede;
 	--red-text: #a94442;
 	--green-text: #3c763d;
@@ -118,7 +118,7 @@
   }
   
   header * {
-    color: white;
+    color: black;
   }
   
   header .logo {
