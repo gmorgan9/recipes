@@ -82,6 +82,7 @@ if (isset($_POST['update-post'])) {
         $_POST['user_id'] = $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
         $_POST['body'] = htmlentities($_POST['body']);
+        $_POST['username']=$_SESSION['username'];
     
         $post_id = update($table, $id, $_POST);
         $_SESSION['message'] = "Post updated successfully";
