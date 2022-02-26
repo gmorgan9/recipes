@@ -9,6 +9,7 @@ $table = 'posts';
 $topics = selectAll('topics');
 $posts = selectAll($table);
 
+$user_name = "select username from users join posts on posts.user_id=users.id;"
 
 $errors = array();
 $id = "";
