@@ -57,7 +57,7 @@ if (isset($_POST['add-post'])) {
         $_POST['user_id'] = $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
         $_POST['body'] = htmlentities($_POST['body']);
-        $_POST['username']=$_SESSION['user_id'];
+        $_POST['username']=$_SESSION['id'];
     
         $post_id = create($table, $_POST);
         $_SESSION['message'] = "Post created successfully";
