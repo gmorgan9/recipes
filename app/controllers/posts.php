@@ -3,6 +3,7 @@
 include(ROOT_PATH . "/app/database/functions.php");
 include(ROOT_PATH . "/app/helpers/middleware.php");
 include(ROOT_PATH . "/app/helpers/validatePost.php");
+session_start();
 
 $table = 'posts';
 
