@@ -64,7 +64,6 @@ include(ROOT_PATH . "/app/controllers/posts.php");
                             <th colspan="3">Action</th>
                         </thead>
                         <tbody>
-                            <?php $post['username'] = $_SESSION['username']; ?>
                             <?php foreach ($posts as $key => $post): ?>
                                 <tr>
                                     <td><?php echo $key + 1; ?></td>
