@@ -55,6 +55,10 @@ include(ROOT_PATH . "/app/controllers/posts.php");
 
                     <h2 class="page-title">Manage Posts</h2>
 
+                    <?php 
+                    $user = get_user_by( posts.user_id = users.id);
+                    echo 'User is ' . $user->first_name . ' ' . $user->last_name; ?>
+
                     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
                     <table>
                         <thead>
