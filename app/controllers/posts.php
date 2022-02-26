@@ -8,6 +8,7 @@ $table = 'posts';
 
 $topics = selectAll('topics');
 $posts = selectAll($table);
+$users = selectALL('users');
 
 
 $errors = array();
@@ -16,6 +17,7 @@ $title = "";
 $body = "";
 $topic_id = "";
 $published = "";
+$username = "";
 
 if (isset($_GET['id'])) {
     $post = selectOne($table, ['id' => $_GET['id']]);
@@ -25,6 +27,7 @@ if (isset($_GET['id'])) {
     $body = $post['body'];
     $topic_id = $post['topic_id'];
     $published = $post['published'];
+
 }
 
 if (isset($_GET['delete_id'])) {
@@ -64,6 +67,7 @@ if (isset($_POST['add-post'])) {
         header("location: " . BASE_URL . "/admin/posts/index.php"); 
         exit();    
     } else {
+        $username = $_POST['username'];
         $title = $_POST['title'];
         $body = $_POST['body'];
         $topic_id = $_POST['topic_id'];
@@ -87,6 +91,7 @@ if (isset($_POST['update-post'])) {
         $_SESSION['type'] = "success";
         header("location: " . BASE_URL . "/admin/posts/index.php");       
     } else {
+        $username = $_POST['username'];
         $title = $_POST['title'];
         $body = $_POST['body'];
         $topic_id = $_POST['topic_id'];
