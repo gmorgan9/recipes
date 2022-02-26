@@ -1,7 +1,7 @@
 <?php 
 include("../../path.php");
 include(ROOT_PATH . "/app/controllers/posts.php");
-//session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +64,7 @@ include(ROOT_PATH . "/app/controllers/posts.php");
                             <th colspan="3">Action</th>
                         </thead>
                         <tbody>
+                            
                             <?php foreach ($posts as $key => $post): ?>
                                 <tr>
                                     <td><?php echo $key + 1; ?></td>
