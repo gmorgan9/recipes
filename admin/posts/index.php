@@ -1,6 +1,7 @@
 <?php 
 include("../../path.php");
 include(ROOT_PATH . "/app/controllers/posts.php");
+include(ROOT_PATH . "/app/controllers/users.php");
 session_start();
 ?>
 <!DOCTYPE html>
@@ -69,7 +70,7 @@ session_start();
                                 <tr>
                                     <td><?php echo $key + 1; ?></td>
                                     <td><?php echo $post['title'] ?></td>
-                                    <td>john</td>
+                                    <td><?php echo $users['username'] ?></td>
                                     <td><a href="edit.php?id=<?php echo $post['id']; ?>" class="edit">edit</a></td>
                                     <td><a href="edit.php?delete_id=<?php echo $post['id']; ?>" class="delete">delete</a></td>
 
