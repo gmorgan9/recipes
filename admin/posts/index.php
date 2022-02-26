@@ -91,7 +91,12 @@ include(ROOT_PATH . "/app/controllers/posts.php");
 
             </div>
             <!-- // Admin Content -->
-
+            <?php 
+                    $sqltest = "Select users.username, posts.user_id from users INNER JOIN posts ON users.id = posts.user_id"; 
+                    // See if already on file 
+                    $u_result = mysqli_query($db,$sqltest);
+                    echo $u_result;
+                    ?>
         </div>
         <!-- // Page Wrapper -->
 
@@ -103,12 +108,7 @@ include(ROOT_PATH . "/app/controllers/posts.php");
             src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
         <!-- Custom Script -->
         <script src="../../assets/js/scripts.js"></script>
-        <?php 
-                    $sqltest = "Select users.username, posts.user_id from users INNER JOIN posts ON users.id = posts.user_id"; 
-                    // See if already on file 
-                    $u_result = mysqli_query($db,$sqltest);
-                    echo $u_result;
-                    ?>
+        
     </body>
 
 </html>
