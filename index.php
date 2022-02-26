@@ -89,7 +89,7 @@ if (isset($_GET['t_id'])) {
           <div class="post clearfix">
             <div class="post-preview">
               <h2><a href="single.php?id=<?php echo $post['id']; ?>"><?php echo $post['title']; ?></a></h2>
-              <i class="far fa-user"><?php echo $post['username']; ?></i>
+              <i class="far fa-user"> <?php echo $post['username']; ?></i>
               &nbsp;
               <i class="far fa-calendar"> <?php echo date('F j, Y', strtotime($post['created_at'])); ?></i>
               <p class="preview-text">
