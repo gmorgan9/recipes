@@ -1,7 +1,7 @@
 <?php 
 include("../../path.php");
 include(ROOT_PATH . "/app/controllers/posts.php");
-include(ROOT_PATH . "/app/controllers/users.php");
+include(ROOT_PATH . "/app/helpers/validatePost.php");
 session_start();
 ?>
 <!DOCTYPE html>
