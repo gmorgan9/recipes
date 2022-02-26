@@ -71,7 +71,7 @@ include(ROOT_PATH . "/app/controllers/posts.php");
                                 <tr>
                                     <td><?php echo $key + 1; ?></td>
                                     <td><?php echo $post['title'] ?></td>
-                                    <td><?php echo $post['username'] ?></td>
+                                    <td><?php echo $_POST['users']['username'] ?></td>
                                     <td><a href="edit.php?id=<?php echo $post['id']; ?>" class="edit">edit</a></td>
                                     <td><a href="edit.php?delete_id=<?php echo $post['id']; ?>" class="delete">delete</a></td>
 
@@ -91,12 +91,6 @@ include(ROOT_PATH . "/app/controllers/posts.php");
 
             </div>
             <!-- // Admin Content -->
-            <?php 
-                    $sqltest = "Select users.username, posts.user_id from users INNER JOIN posts ON users.id = posts.user_id"; 
-                    // See if already on file 
-                    $u_result = mysqli_query($db,$sqltest);
-                    echo $u_result;
-                    ?>
         </div>
         <!-- // Page Wrapper -->
 
