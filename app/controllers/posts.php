@@ -9,6 +9,7 @@ $table = 'posts';
 $topics = selectAll('topics');
 $posts = selectAll($table);
 
+
 $errors = array();
 $id = "";
 $title = "";
