@@ -9,8 +9,6 @@ $table = 'posts';
 $topics = selectAll('topics');
 $posts = selectAll($table);
 
-$user_name = "select username from users join posts on posts.user_id=users.id;"
-
 $errors = array();
 $id = "";
 $title = "";
@@ -55,7 +53,6 @@ if (isset($_POST['add-post'])) {
     $errors = validatePost($_POST);
     if (count($errors) == 0) {
         unset($_POST['add-post']);
-        $_POST['username'] = $_SESSION['username'];
         $_POST['user_id'] = $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
         $_POST['body'] = htmlentities($_POST['body']);
