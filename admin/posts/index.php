@@ -56,8 +56,11 @@ include(ROOT_PATH . "/app/controllers/posts.php");
                     <h2 class="page-title">Manage Posts</h2>
 
                     <?php 
-                    $user = get_user_by( posts.user_id = users.id);
-                    echo 'User is ' . $user->first_name . ' ' . $user->last_name; ?>
+                    $sqltest = "Select users.username, posts.user_id from users INNER JOIN posts ON users.id = posts.user_id"; 
+                    // See if already on file 
+                    $u_result = mysqli_query($db,$sqltest);
+                    echo $u_result;
+                    ?>
 
                     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
                     <table>
