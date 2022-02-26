@@ -64,12 +64,12 @@ include(ROOT_PATH . "/app/controllers/posts.php");
                             <th colspan="3">Action</th>
                         </thead>
                         <tbody>
-                            <?php $_SESSION['username'] = $post['username']; ?>
+                            <?php $post['username'] = $_SESSION['username']; ?>
                             <?php foreach ($posts as $key => $post): ?>
                                 <tr>
                                     <td><?php echo $key + 1; ?></td>
                                     <td><?php echo $post['title'] ?></td>
-                                    <td><?php echo $_SESSION['username']; ?></td>
+                                    <td><?php echo $post['username']; ?></td>
                                     <td><a href="edit.php?id=<?php echo $post['id']; ?>" class="edit">edit</a></td>
                                     <td><a href="edit.php?delete_id=<?php echo $post['id']; ?>" class="delete">delete</a></td>
 
