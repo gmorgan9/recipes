@@ -167,7 +167,11 @@ foreach ($files as $file) {
                     </h4>
                     <p>
                       <?php
-                        echo $r_ingredients; 
+                        if(is_null($r_ingredients)) {
+                          echo "No ingredients listed.";
+                        } else {
+                          echo $r_ingredients; 
+                        }
                       ?>
                     </p>
                   </div>
@@ -178,7 +182,11 @@ foreach ($files as $file) {
                     </h4>
                     <p>
                       <?php
-                        echo $r_directions; 
+                        if(is_null($r_directions)) {
+                          echo "No directions listed.";
+                        } else {
+                          echo $r_directions; 
+                        }
                       ?>
                     </p>
                   </div>
@@ -189,7 +197,11 @@ foreach ($files as $file) {
                     </h4>
                     <p>
                       <?php
-                        echo $r_notes; 
+                        if(is_null($r_notes)) {
+                          echo "No notes listed.";
+                        } else {
+                          echo $r_notes; 
+                        }
                       ?>
                     </p>
                   </div>
