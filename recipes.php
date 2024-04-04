@@ -153,12 +153,12 @@ foreach ($files as $file) {
                       </p>
                     </div>
                     
-                    <?php
-                    
-                    ?>
-                    <?php
-                      // echo $r_ingredients; 
-                    ?>
+                   <?php if(is_null($r_link)){} else {?>
+                      <p>
+                        <strong>Original Recipe: </strong> <a href="<?php echo $r_link; ?>">Visit</a>
+                      </p>
+                   <?php } ?>
+                   
                   </div>
 
                   <div class="mt-3">
@@ -208,7 +208,7 @@ foreach ($files as $file) {
 
                   <div>
                     <p>
-                      Visit original recipe<a href="<?php echo $r_link; ?>"> here</a>.
+                      Visit original recipe <a href="<?php echo $r_link; ?>">here</a>.
                     </p>
                   </div>
 
