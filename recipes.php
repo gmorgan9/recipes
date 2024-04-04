@@ -122,7 +122,7 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <p>
+                  <p style="border: 1.5px solid gray; padding: 5px;">
                     <?php
                       echo $r_category; 
                     ?>
