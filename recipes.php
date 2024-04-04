@@ -1,27 +1,18 @@
 <?php
 date_default_timezone_set('America/Denver');
-// require_once "app/database/connection.php";
-// require_once "app/functions/add_app.php";
-// require_once "path.php";
+require_once "app/database/connection.php";
+require_once "path.php";
 session_start();
 
-// $files = glob("app/functions/*.php");
-// foreach ($files as $file) {
-//     require_once $file;
-// }
-// logoutUser($conn);
-// if(isLoggedIn() == false) {
-//     header('location:' . BASE_URL . '/login.php');
-// }
+$files = glob("app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+<head>
 
     <!-- application meta -->
 
@@ -49,6 +40,8 @@ session_start();
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!-- end bootstrap -->
+
+    <title>View Asset | Asset360</title>
 
     <!-- custom styles -->
     <style>
@@ -78,9 +71,8 @@ session_start();
     </style>
     <!-- end custom styles -->
 
-    <title>Recipes</title>
-  </head>
-  <body style="margin: 0; padding: 0">
+</head>
+<body style="margin: 0; padding: 0">
     <h2
       class=""
       style="
@@ -103,42 +95,42 @@ session_start();
     <div class="pt-3"></div>
 
     <div class="content" style="margin-top: 60px; margin-bottom: 80px;">
-    
-    <?php
-            // $id = $_GET['id'];
-            // echo $id;
-            // $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
-            // $r_result = mysqli_query($conn, $r_sql);
-            // if($r_result) {
-            // $num_rows = mysqli_num_rows($r_result);
-            // if($num_rows > 0) {
-            //     while ($r_row = mysqli_fetch_assoc($r_result)) {
-            //         $r_id             = $r_row['recipe_id']; 
-            //         $r_title          = $r_row['title']; 
-            //         $r_ingredients    = $r_row['ingredients'];
-            //         $r_directions     = $r_row['directions'];
-            //         $r_prep_time      = $r_row['prep_time'];
-            //         $r_cook_time      = $r_row['cook_time'];
-            //         $r_preheat_temp   = $r_row['preheat_temp'];
-            //         $r_serves         = $r_row['serves'];
-            //         $r_notes          = $r_row['notes'];
-            //         $r_link           = $r_row['link'];
-            //         $r_category       = $r_row['category'];
-                // }
-              ?>
+            <?php
+            $id = $_GET['id'];
+            echo $id;
+            $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
+            $r_result = mysqli_query($conn, $r_sql);
+            if($r_result) {
+            $num_rows = mysqli_num_rows($r_result);
+            if($num_rows > 0) {
+                while ($r_row = mysqli_fetch_assoc($r_result)) {
+                    $r_id             = $r_row['recipe_id']; 
+                    $r_title          = $r_row['title']; 
+                    $r_ingredients    = $r_row['ingredients'];
+                    $r_directions     = $r_row['directions'];
+                    $r_prep_time      = $r_row['prep_time'];
+                    $r_cook_time      = $r_row['cook_time'];
+                    $r_preheat_temp   = $r_row['preheat_temp'];
+                    $r_serves         = $r_row['serves'];
+                    $r_notes          = $r_row['notes'];
+                    $r_link           = $r_row['link'];
+                    $r_category       = $r_row['category'];
+                }
+                ?>
 
-              <h2>
-                <?php //echo $r_title; ?>
-              </h2>
+                <h2>
+                  <?php //echo $r_title; ?>
+                </h2>
 
+                
+                
 
-<?php //}
-        //} ?>
-    
-
+            <?php }
+        } ?>
     </div>
+</div>
 
-    <div class="navbar">
+<div class="navbar">
       <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
       <!-- <a href="#discover">Discover</a>
         <a href="#favorites">Favorites</a>
