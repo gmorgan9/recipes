@@ -141,7 +141,11 @@ foreach ($files as $file) {
                         <p class="text-muted">
                         <strong>Serves: </strong>
                         <?php 
-                        echo $r_serves;
+                        if(is_null($r_serves)) {
+                          echo "N/A";
+                        } else {
+                          echo $r_serves; 
+                        }
                         ?>
                       </p>
                       </p>
