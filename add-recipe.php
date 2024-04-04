@@ -68,6 +68,16 @@ foreach ($files as $file) {
         </div>
         <div class="row mb-3">
             <div class="col">
+                <label class="form-label" for="category">Category</label>
+                <select class="form-control" name="category">
+                    <option value="">Select an option...</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+            <div class="col">
                 <label for="prep_time" class="form-label">Prep Time</label>
                 <input type="text" class="form-control" id="prep_time" name="prep_time">
             </div>
@@ -79,8 +89,19 @@ foreach ($files as $file) {
                 </div>
             </div>
             <div class="col">
-                <label for="prep_time" class="form-label">Prep Time</label>
-                <input type="text" class="form-control" id="prep_time" name="prep_time">
+                <label for="preheat_temp" class="form-label">Pre-heat Temperature</label>
+                <input type="text" class="form-control" id="preheat_temp" name="preheat_temp">
+            </div>
+            <div class="col">
+                <label for="serves" class="form-label">Serves</label>
+                <input type="text" class="form-control" id="serves" name="serves">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="link" class="form-label">Recipe Link</label>
+                <input type="text" class="form-control" id="link" name="link">
             </div>
         </div>
 
@@ -94,59 +115,6 @@ foreach ($files as $file) {
                 <textarea class="form-control" name="directions" rows="5"></textarea>
             </div>
         </div>
-
-        <div class="row mb-3">
-            <div class="col">
-                <label class="form-label" for="asset_type">Asset Type</label>
-                <select class="form-control" name="asset_type">
-                    <option value="">Select an option...</option>
-                    <option value="Server">Server</option>
-                    <option value="Computer">Computer</option>
-                    <option value="Network Device">Network Device</option>
-                    <option value="Mobile Device">Mobile Device</option>
-                    <option value="Storage Device">Storage Device</option>
-                    <!-- <option value="IP Address">IP Address</option> -->
-                    <option value="IOT Device">IOT Device</option>
-                    <option value="Peripheral">Peripheral</option>
-                </select>
-            </div>
-            
-            <div class="col">
-                <label for="acquisition_date" class="form-label">Acquisition Date</label>
-                <input type="date" class="form-control" id="acquisition_date" name="acquisition_date">
-            </div>
-            <div class="col">
-                <label for="end_of_life_date" class="form-label">End of Life Date</label>
-                <input type="date" class="form-control" id="end_of_life_date" name="end_of_life_date">
-            </div>
-            <!-- <div class="col">
-                <label for="maintenance_schedule" class="form-label">Maintenance Schedule</label>
-                <input type="date" class="form-control" id="maintenance_schedule" name="maintenance_schedule">
-            </div> -->
-            <?php
-                $audit_schedule = date('M d, Y', strtotime('+3 months'));
-            ?>
-            <div class="col">
-                <label for="audit_schedule" class="form-label">First Audit</label>
-                <input type="text" class="form-control" id="audit_schedule" name="audit_schedule" readonly value="<?php echo $audit_schedule; ?>">
-            </div>
-            <div class="col">
-                <label class="form-label" for="status">Status</label>
-                <select class="form-control" name="status">
-                    <option value="">Select an option...</option>
-                    <option value="In Use">In Use</option>
-                    <option value="In Repair">In Repair</option>
-                    <option value="In Storage">In Storage</option>
-                    <option value="Disposed">Disposed</option>
-                    <option value="Sold">Sold</option>
-                    <option value="Sub Let">Sub Let</option>
-                    <option value="Unknown">Unknown</option>
-                </select>
-            </div>
-        </div>
-
-        
-    
 
         <div class="row">
             <div class="col">
