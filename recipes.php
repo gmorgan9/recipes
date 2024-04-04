@@ -106,9 +106,8 @@ foreach ($files as $file) {
     
     <?php
             $id = $_GET['id'];
-            $r_sql = "SELECT *
-            FROM recipes
-            WHERE recipe_id = $id";
+            echo $id;
+            // $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
             $r_result = mysqli_query($conn, $r_sql);
             if($r_result) {
             $num_rows = mysqli_num_rows($r_result);
