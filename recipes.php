@@ -45,29 +45,7 @@ foreach ($files as $file) {
 
     <!-- custom styles -->
     <style>
-      .navbar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #f3f3f3;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 0;
-        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-      }
-      .navbar a {
-        text-decoration: none;
-        color: #333;
-        text-align: center;
-        flex: 1;
-        padding: 10px 0;
-        transition: background-color 0.3s ease;
-      }
-      /* .navbar a:hover {
-          background-color: #ddd;
-        } */
+      
     </style>
     <!-- end custom styles -->
 
@@ -94,7 +72,7 @@ foreach ($files as $file) {
 
     <div class="pt-3"></div>
 
-    <div class="content" style="margin-top: 60px; margin-bottom: 80px;">
+    <div class="content" style="margin-top: 60px; margin-bottom: 50px;">
             <?php
             $id = $_GET['id'];
             $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
@@ -162,13 +140,6 @@ foreach ($files as $file) {
         } ?>
     </div>
 </div>
-
-<div class="navbar">
-      <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-      <!-- <a href="#discover">Discover</a>
-        <a href="#favorites">Favorites</a>
-        <a href="#profile">Profile</a> -->
-    </div>
 
     <!-- bootstrap script -->
     <script
