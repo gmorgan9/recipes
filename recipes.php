@@ -127,7 +127,7 @@ foreach ($files as $file) {
                       echo $r_category; 
                     ?>
                     <?php
-                    if($r_preheat_temp = null) {
+                    if($r_preheat_temp = NULL) {
                       echo "N/A";
                     } else {
                       echo $r_preheat_temp . '&deg;F'; 
