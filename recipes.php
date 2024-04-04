@@ -100,25 +100,25 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <div class="recipe_details" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
+                  <div class="recipe_details d-flex" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
                     <p class="text-muted">Category: <?php echo $r_category; ?></p>
                     <p class="text-muted">
-                      Preperation Time: 
+                    <strong>Prep: </strong>
                       <?php 
                       if(is_null($r_prep_time)) {
                         echo "N/A";
                       } else {
-                        echo $r_prep_time . 'min'; 
+                        echo $r_prep_time . ' min'; 
                       }
                       ?>
                     </p>
                     <p class="text-muted">
-                      Cook Time: 
+                      <strong>Cook: </strong>
                       <?php 
                       if(is_null($r_cook_time)) {
                         echo "N/A";
                       } else {
-                        echo $r_cook_time . 'min'; 
+                        echo $r_cook_time . ' min'; 
                       }
                       ?>
                     </p>
@@ -128,7 +128,7 @@ foreach ($files as $file) {
                       if(is_null($r_preheat_temp)) {
                         echo "N/A";
                       } else {
-                        echo $r_preheat_temp . '&deg;F'; 
+                        echo $r_preheat_temp . ' &deg;F'; 
                       }
                       ?>
                     </p>
