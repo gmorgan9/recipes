@@ -102,24 +102,7 @@ foreach ($files as $file) {
                     <option value="Peripheral">Peripheral</option>
                 </select>
             </div>
-            <div class="col">
-                <label class="form-label" for="status">Asset Custodian</label>
-                <select class="form-control" name="custodian">
-                    <option value="">Select an option...</option>
-                    <?php
-                    $sql = "SELECT fname, lname FROM users";
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) { 
-                            $first_name = $row['fname'];
-                            $last_name  = $row['lname'];
-
-                            $full_name = $first_name . " " . $last_name;
-                    ?>
-                        <option value="<?php echo $full_name; ?>"><?php echo $full_name; ?></option>
-                    <?php } } ?>
-                </select>
-            </div>
+            
             <div class="col">
                 <label for="acquisition_date" class="form-label">Acquisition Date</label>
                 <input type="date" class="form-control" id="acquisition_date" name="acquisition_date">
