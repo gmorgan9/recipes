@@ -123,19 +123,17 @@ foreach ($files as $file) {
                   </h3>
 
                   <div class="recipe_details" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
-                    <p class="text-muted">
-                      Category: <?php echo $r_category; ?>
-                    </p>
+                    <p class="text-muted">Category: <?php echo $r_category; ?></p>
                     
                     <?php
-                    if(is_null($r_preheat_temp)) {
-                      echo "N/A";
-                    } else {
-                      echo $r_preheat_temp . '&deg;F'; 
-                    }
+                    // if(is_null($r_preheat_temp)) {
+                    //   echo "N/A";
+                    // } else {
+                    //   echo $r_preheat_temp . '&deg;F'; 
+                    // }
                     ?>
                     <?php
-                      echo $r_ingredients; 
+                      // echo $r_ingredients; 
                     ?>
                   </div>
 
