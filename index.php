@@ -87,6 +87,7 @@ foreach ($files as $file) {
     <h2
       class=""
       style="
+        z-index: 999;
         position: fixed;
         top: 0;
         left: 0;
@@ -105,21 +106,7 @@ foreach ($files as $file) {
 
     <div class="pt-3"></div>
 
-    <!-- <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
-      <div class="card mx-auto" style="width: 95%">
-        <div class="card-body">
-          <a href="recipes.html" class="stretched-link"></a>
-          <h3 class="card-title">Cookies</h3>
-          <p
-            class="card-text text-muted"
-            style="margin-top: -7px; font-size: 12px"
-          >
-            Dessert
-          </p>
-        </div>
-      </div>
-    </div> -->
-<div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
+<div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px; z-index: -999;">
 
     <?php
 // Assuming you have already established a database connection
