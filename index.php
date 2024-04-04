@@ -131,19 +131,18 @@ $result = mysqli_query($conn, $query);
 // Check if query executed successfully
 if ($result) {
     // Loop through the result set
-    while ($row = mysqli_fetch_assoc($result)) {
-        // Output the recipe in the desired format
-        echo '
+    while ($row = mysqli_fetch_assoc($result)) { ?>
+        
         
             <div class="card mx-auto" style="width: 95%">
                 <div class="card-body">
-                    <a href="recipes.html?id=' . $row['recipe_id'] . '" class="stretched-link"></a>
-                    <h3 class="card-title">' . $row['title'] . '</h3>
-                    <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px">' . $row['category'] . '</p>
+                    <a href="recipes.html?id=<?php echo $row['recipe_id']; ?>" class="stretched-link"></a>
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
+                    <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px"><?php echo $row['category']; ?></p>
                 </div>
             </div>
           ';
-    }
+    <?php }
 } else {
     // Handle error if query fails
     echo "Error: " . mysqli_error($conn);
