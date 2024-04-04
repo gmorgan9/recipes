@@ -54,19 +54,19 @@ foreach ($files as $file) {
     
 
         <div class="row mb-3">
-            <div class="col">
+            <!-- <div class="col">
                 <label for="asset_tag_no" class="form-label">Asset Tag Number</label>
                 <div class="input-group">
                     <div class="input-group-text">M-</div>
                     <input type="text" class="form-control" id="asset_tag_no" name="asset_tag_no">
                 </div>
+            </div> -->
+            <div class="col">
+                <label for="title" class="form-label">Recipe Title</label>
+                <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="col">
-                <label for="asset_name" class="form-label">Asset Name</label>
-                <input type="text" class="form-control" id="asset_name" name="asset_name">
-            </div>
-            <div class="col">
-                <label for="serial_number" class="form-label">Serial Number</label>
+                <label for="serial_number" class="form-label">Ingredients</label>
                 <input type="text" class="form-control" id="serial_number" name="serial_number">
             </div>
             <div class="col">
@@ -84,6 +84,12 @@ foreach ($files as $file) {
             <div class="col">
                 <label for="location" class="form-label">Location</label>
                 <input type="text" class="form-control" id="location" name="location">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label" for="ingredients">Ingredients</label>
+                <textarea class="form-control" name="ingredients" rows="5"></textarea>
             </div>
         </div>
 
