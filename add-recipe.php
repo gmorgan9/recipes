@@ -78,8 +78,11 @@ foreach ($files as $file) {
                 </select>
             </div>
             <div class="col">
-                <label for="prep_time" class="form-label">Prep Time</label>
-                <input type="text" class="form-control" id="prep_time" name="prep_time">
+                <label for="prep_time" class="form-label">Preperation Time</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="prep_time" name="prep_time">
+                    <div class="input-group-text">Min</div>
+                </div>
             </div>
             <div class="col">
                 <label for="cook_time" class="form-label">Cook Time</label>
@@ -89,12 +92,18 @@ foreach ($files as $file) {
                 </div>
             </div>
             <div class="col">
-                <label for="preheat_temp" class="form-label">Pre-heat Temperature</label>
-                <input type="text" class="form-control" id="preheat_temp" name="preheat_temp">
+                <label for="preheat_temp" class="form-label">Pre-Heat Temp</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="preheat_temp" name="preheat_temp">
+                    <div class="input-group-text">&deg;F</div>
+                </div>
             </div>
             <div class="col">
                 <label for="serves" class="form-label">Serves</label>
-                <input type="text" class="form-control" id="serves" name="serves">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="serves" name="serves">
+                    <div class="input-group-text">persons</div>
+                </div>
             </div>
         </div>
 
