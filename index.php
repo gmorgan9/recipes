@@ -126,7 +126,7 @@ foreach ($files as $file) {
 
 // Query to select title and category from the recipes table
 $query = "SELECT title, category FROM recipes";
-$result = mysqli_query($connection, $query);
+$result = mysqli_query($conn, $query);
 
 // Check if query executed successfully
 if ($result) {
@@ -146,7 +146,7 @@ if ($result) {
     }
 } else {
     // Handle error if query fails
-    echo "Error: " . mysqli_error($connection);
+    echo "Error: " . mysqli_error($conn);
 }
 
 // Close database connection
