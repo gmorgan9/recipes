@@ -36,6 +36,15 @@ foreach ($files as $file) {
       name="viewport"
       content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"
     />
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/180.png">
+
 
     <!-- end application meta -->
 
