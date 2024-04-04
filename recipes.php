@@ -122,10 +122,11 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <p style="border: 1.5px solid gray; padding: 5px;">
-                    <?php
-                      echo $r_category; 
-                    ?>
+                  <div class="recipe_details" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
+                    <p class="text-muted">
+                      Category: <?php echo $r_category; ?>
+                    </p>
+                    
                     <?php
                     if(is_null($r_preheat_temp)) {
                       echo "N/A";
@@ -136,7 +137,7 @@ foreach ($files as $file) {
                     <?php
                       echo $r_ingredients; 
                     ?>
-                  </p>
+                  </div>
 
                   <p>
                     <?php
