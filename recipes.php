@@ -161,21 +161,39 @@ foreach ($files as $file) {
                     ?>
                   </div>
 
-                  <p>
-                    <?php
-                      echo $r_ingredients; 
-                    ?>
-                  </p>
-                  <p>
-                    <?php
-                      echo $r_directions; 
-                    ?>
-                  </p>
-                  <p>
-                    <?php
-                      echo $r_notes; 
-                    ?>
-                  </p>
+                  <div>
+                    <h4>
+                      Ingredients
+                    </h4>
+                    <p>
+                      <?php
+                        echo $r_ingredients; 
+                      ?>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>
+                      Directions
+                    </h4>
+                    <p>
+                      <?php
+                        echo $r_directions; 
+                      ?>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>
+                      Notes
+                    </h4>
+                    <p>
+                      <?php
+                        echo $r_notes; 
+                      ?>
+                    </p>
+                  </div>
+
                 </div>
                 
 
