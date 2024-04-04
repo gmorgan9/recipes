@@ -31,20 +31,18 @@ foreach ($files as $file) {
     <!-- Custom Styles -->
     <!-- <link rel="stylesheet" href="assets/css/styles.css?v=<?php //echo time(); ?>"> -->
 
-    <title>Home | Asset360</title>
+    <title>Add a Recipe</title>
 </head>
 <body>
-    <?php //include(ROOT_PATH . "/app/includes/header.php"); ?>
-    <?php //include(ROOT_PATH . "/app/includes/sidebar.php"); ?>
 
  <!-- main-container -->
     <div class="container" style="padding: 0 75px 0 75px;">
     <form method="POST" action="">
         <br>
         <div class="top-form" style="margin-bottom: -38px;">
-            <h2 class="">Add an Asset</h2>
+            <h2 class="">Add a Recipe</h2>
             <div class="float-end" style="margin-top: -50px;">
-                <button type="submit" name="add-asset" class="btn btn-primary">Submit</button>
+                <button type="submit" name="add-recipe" class="btn btn-primary">Submit</button>
             </div>
         </div>
         <br>
