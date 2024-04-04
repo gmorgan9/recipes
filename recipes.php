@@ -117,9 +117,18 @@ foreach ($files as $file) {
                 }
                 ?>
 
-                <h2>
-                  <?php echo $r_title; ?>
-                </h2>
+                <div class="recipe_content" style="padding: 15px;">
+                  <h3>
+                    <?php echo $r_title; ?>
+                  </h3>
+
+                  <p>
+                    <?php
+                      echo $r_ingredients; 
+                    ?>
+                  </p>
+                </div>
+                
 
                 
                 
