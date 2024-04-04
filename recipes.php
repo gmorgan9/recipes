@@ -118,9 +118,21 @@ foreach ($files as $file) {
                 ?>
 
                 <div class="recipe_content" style="padding: 15px;">
-                  <h3>
+                  <h3 class="text-center">
                     <?php echo $r_title; ?>
                   </h3>
+
+                  <p>
+                    <?php
+                      echo $r_category; 
+                    ?>
+                    <?php
+                      echo $r_preheat_temp . '&deg;F'; 
+                    ?>
+                    <?php
+                      echo $r_ingredients; 
+                    ?>
+                  </p>
 
                   <p>
                     <?php
@@ -130,6 +142,11 @@ foreach ($files as $file) {
                   <p>
                     <?php
                       echo $r_directions; 
+                    ?>
+                  </p>
+                  <p>
+                    <?php
+                      echo $r_notes; 
                     ?>
                   </p>
                 </div>
