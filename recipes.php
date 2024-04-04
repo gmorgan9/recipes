@@ -137,6 +137,7 @@ foreach ($files as $file) {
                           echo $r_preheat_temp . ' &deg;F'; 
                         }
                         ?>
+                        &nbsp; | &nbsp;
                         <p class="text-muted">
                         <strong>Serves: </strong>
                         <?php 
