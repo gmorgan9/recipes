@@ -141,7 +141,6 @@ if ($result) {
                     <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px"><?php echo $row['category']; ?></p>
                 </div>
             </div>
-          ';
     <?php }
 } else {
     // Handle error if query fails
