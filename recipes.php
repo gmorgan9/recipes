@@ -108,32 +108,32 @@ foreach ($files as $file) {
             $id = $_GET['id'];
             echo $id;
             // $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
-            $r_result = mysqli_query($conn, $r_sql);
-            if($r_result) {
-            $num_rows = mysqli_num_rows($r_result);
-            if($num_rows > 0) {
-                while ($r_row = mysqli_fetch_assoc($r_result)) {
-                    $r_id             = $r_row['recipe_id']; 
-                    $r_title          = $r_row['title']; 
-                    $r_ingredients    = $r_row['ingredients'];
-                    $r_directions     = $r_row['directions'];
-                    $r_prep_time      = $r_row['prep_time'];
-                    $r_cook_time      = $r_row['cook_time'];
-                    $r_preheat_temp   = $r_row['preheat_temp'];
-                    $r_serves         = $r_row['serves'];
-                    $r_notes          = $r_row['notes'];
-                    $r_link           = $r_row['link'];
-                    $r_category       = $r_row['category'];
-                }
+            // $r_result = mysqli_query($conn, $r_sql);
+            // if($r_result) {
+            // $num_rows = mysqli_num_rows($r_result);
+            // if($num_rows > 0) {
+            //     while ($r_row = mysqli_fetch_assoc($r_result)) {
+            //         $r_id             = $r_row['recipe_id']; 
+            //         $r_title          = $r_row['title']; 
+            //         $r_ingredients    = $r_row['ingredients'];
+            //         $r_directions     = $r_row['directions'];
+            //         $r_prep_time      = $r_row['prep_time'];
+            //         $r_cook_time      = $r_row['cook_time'];
+            //         $r_preheat_temp   = $r_row['preheat_temp'];
+            //         $r_serves         = $r_row['serves'];
+            //         $r_notes          = $r_row['notes'];
+            //         $r_link           = $r_row['link'];
+            //         $r_category       = $r_row['category'];
+                // }
               ?>
 
               <h2>
-                <?php echo $r_title; ?>
+                <?php //echo $r_title; ?>
               </h2>
 
 
-<?php }
-        } ?>
+<?php //}
+        //} ?>
     
 
     </div>
