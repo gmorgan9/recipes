@@ -211,12 +211,6 @@ foreach ($files as $file) {
                     </p>
                   </div>
 
-                  <div>
-                    <p>
-                      Visit original recipe <a href="<?php echo $r_link; ?>">here</a>.
-                    </p>
-                  </div>
-
                 </div>
                 
 
