@@ -152,11 +152,16 @@ foreach ($files as $file) {
                       </p>
                       </p>
                     </div>
+
+
+                    
                     
                    <?php if(is_null($r_link)){} else {?>
+                    <div class="bottom2 d-flex mx-auto">
                       <p>
                         <strong>Original Recipe: </strong> <a href="<?php echo $r_link; ?>">Visit</a>
                       </p>
+                    </div>
                    <?php } ?>
                    
                   </div>
