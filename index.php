@@ -119,6 +119,8 @@ foreach ($files as $file) {
         </div>
       </div>
     </div> -->
+<div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
+
     <?php
 // Assuming you have already established a database connection
 
@@ -132,7 +134,7 @@ if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
         // Output the recipe in the desired format
         echo '
-        <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
+        
             <div class="card mx-auto" style="width: 95%">
                 <div class="card-body">
                     <a href="recipes.html" class="stretched-link"></a>
@@ -140,7 +142,7 @@ if ($result) {
                     <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px">' . $row['category'] . '</p>
                 </div>
             </div>
-        </div>';
+          ';
     }
 } else {
     // Handle error if query fails
@@ -150,6 +152,7 @@ if ($result) {
 // Close database connection
 mysqli_close($connection);
 ?>
+</div>
 
     <!-- <div class="navbar">
       <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
