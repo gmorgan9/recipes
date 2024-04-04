@@ -91,6 +91,10 @@ foreach ($files as $file) {
                 <label class="form-label" for="ingredients">Ingredients</label>
                 <textarea class="form-control" name="ingredients" rows="5"></textarea>
             </div>
+            <div class="col">
+                <label class="form-label" for="directions">Directions</label>
+                <textarea class="form-control" name="directions" rows="5"></textarea>
+            </div>
         </div>
 
         <div class="row mb-3">
