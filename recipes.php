@@ -110,7 +110,7 @@ foreach ($files as $file) {
             FROM recipes
             WHERE recipe_id = $id";
             $r_result = mysqli_query($conn, $r_sql);
-            if($off_result) {
+            if($r_result) {
             $num_rows = mysqli_num_rows($r_result);
             if($num_rows > 0) {
                 while ($r_row = mysqli_fetch_assoc($r_result)) {
