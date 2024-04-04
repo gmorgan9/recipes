@@ -1,3 +1,22 @@
+<?php
+date_default_timezone_set('America/Denver');
+require_once "app/database/connection.php";
+// require_once "app/functions/add_app.php";
+require_once "path.php";
+session_start();
+
+$files = glob("app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
+// logoutUser($conn);
+// if(isLoggedIn() == false) {
+//     header('location:' . BASE_URL . '/login.php');
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -86,7 +105,7 @@
 
     <div class="pt-3"></div>
 
-    <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
+    <!-- <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
       <div class="card mx-auto" style="width: 95%">
         <div class="card-body">
           <a href="recipes.html" class="stretched-link"></a>
@@ -99,20 +118,38 @@
           </p>
         </div>
       </div>
+    </div> -->
+    <?php
+// Assuming you have already established a database connection
 
-      <div class="card mx-auto" style="width: 95%">
-        <div class="card-body">
-          <a href="#" class="stretched-link"></a>
-          <h3 class="card-title">Cookies</h3>
-          <p
-            class="card-text text-muted"
-            style="margin-top: -7px; font-size: 12px"
-          >
-            Dessert
-          </p>
-        </div>
-      </div>
-    </div>
+// Query to select title and category from the recipes table
+$query = "SELECT title, category FROM recipes";
+$result = mysqli_query($connection, $query);
+
+// Check if query executed successfully
+if ($result) {
+    // Loop through the result set
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Output the recipe in the desired format
+        echo '
+        <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
+            <div class="card mx-auto" style="width: 95%">
+                <div class="card-body">
+                    <a href="recipes.html" class="stretched-link"></a>
+                    <h3 class="card-title">' . $row['title'] . '</h3>
+                    <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px">' . $row['category'] . '</p>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    // Handle error if query fails
+    echo "Error: " . mysqli_error($connection);
+}
+
+// Close database connection
+mysqli_close($connection);
+?>
 
     <!-- <div class="navbar">
       <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
