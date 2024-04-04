@@ -125,7 +125,7 @@ foreach ($files as $file) {
 // Assuming you have already established a database connection
 
 // Query to select title and category from the recipes table
-$query = "SELECT title, category FROM recipes";
+$query = "SELECT title, category, recipe_id FROM recipes";
 $result = mysqli_query($conn, $query);
 
 // Check if query executed successfully
