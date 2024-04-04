@@ -141,13 +141,7 @@ foreach ($files as $file) {
                         <p class="text-muted">
                         <strong>Serves: </strong>
                         <?php 
-                        if(is_null($r_serves)) {
-                          echo "N/A";
-                        } elseif($r_serves == "1") {
-                          echo $r_serves . ' person'; 
-                        } else {
-                          echo $r_serves . ' people'; 
-                        }
+                        echo $r_serves;
                         ?>
                       </p>
                       </p>
