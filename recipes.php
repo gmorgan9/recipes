@@ -100,7 +100,7 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <div class="recipe_details d-flex flex-column mx-auto my-auto" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
+                  <div class="recipe_details d-flex flex-column mx-auto justify-align-center" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
                     <div class="top d-flex mx-auto">
                       <p class="text-muted"><strong>Category: </strong><?php echo $r_category; ?></p>
                       &nbsp; | &nbsp;
