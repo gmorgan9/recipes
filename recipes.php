@@ -100,7 +100,7 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <div class="recipe_details d-flex flex-column mx-auto" style="border: 1.5px solid gray; padding: 5px; font-size: 12px; padding-top: 15px; padding-bottom: -20px;">
+                  <div class="recipe_details d-flex flex-column mx-auto" style="border: 1.5px solid gray; padding: 5px; font-size: 12px; padding-top: 20px;">
                     <div class="top d-flex mx-auto">
                       <p class="text-muted"><strong>Category: </strong><?php echo $r_category; ?></p>
                       &nbsp; | &nbsp;
@@ -137,6 +137,18 @@ foreach ($files as $file) {
                           echo $r_preheat_temp . ' &deg;F'; 
                         }
                         ?>
+                        <p class="text-muted">
+                        <strong>Serves: </strong>
+                        <?php 
+                        if(is_null($r_serves)) {
+                          echo "N/A";
+                        } elseif($r_serves == "1") {
+                          echo $r_serves . ' person'; 
+                        } else {
+                          echo $r_serves . ' people'; 
+                        }
+                        ?>
+                      </p>
                       </p>
                     </div>
                     
