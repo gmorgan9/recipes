@@ -113,7 +113,7 @@ foreach ($files as $file) {
                       }
                       ?>
                     </p>
-                    <br>
+                    <br><br>
                     <p class="text-muted">
                       <strong>Cook: </strong>
                       <?php 
