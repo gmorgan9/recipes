@@ -97,7 +97,6 @@ foreach ($files as $file) {
     <div class="content" style="margin-top: 60px; margin-bottom: 80px;">
             <?php
             $id = $_GET['id'];
-            echo $id;
             $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
             $r_result = mysqli_query($conn, $r_sql);
             if($r_result) {
@@ -119,7 +118,7 @@ foreach ($files as $file) {
                 ?>
 
                 <h2>
-                  <?php //echo $r_title; ?>
+                  <?php echo $r_title; ?>
                 </h2>
 
                 
