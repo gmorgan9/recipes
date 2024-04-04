@@ -71,10 +71,12 @@ foreach ($files as $file) {
                 <label for="prep_time" class="form-label">Prep Time</label>
                 <input type="text" class="form-control" id="prep_time" name="prep_time">
             </div>
-            <label for="asset_tag_no" class="form-label">Asset Tag Number</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="asset_tag_no" name="asset_tag_no">
-                <div class="input-group-text">M-</div>
+            <div class="col">
+                <label for="cook_time" class="form-label">Cook Time</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cook_time" name="cook_time">
+                    <div class="input-group-text">Min</div>
+                </div>
             </div>
             <div class="col">
                 <label for="prep_time" class="form-label">Prep Time</label>
