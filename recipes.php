@@ -30,11 +30,9 @@ foreach ($files as $file) {
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <!-- <meta name="viewport" content="initial-scale = 1.0, user-scalable=no" /> -->
-
     <meta
       name="viewport"
-      content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"
+      content="initial-scale = 1.0, user-scalable=no, minimal-ui"
     />
 
     <!-- end application meta -->
@@ -54,7 +52,7 @@ foreach ($files as $file) {
 
     <!-- custom styles -->
     <style>
-      /* .navbar {
+      .navbar {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -74,10 +72,9 @@ foreach ($files as $file) {
         padding: 10px 0;
         transition: background-color 0.3s ease;
       }
-       */
-      .card:not(:last-child) {
-        margin-bottom: 15px; /* Adjust this value as needed */
-      }
+      /* .navbar a:hover {
+          background-color: #ddd;
+        } */
     </style>
     <!-- end custom styles -->
 
@@ -105,61 +102,49 @@ foreach ($files as $file) {
 
     <div class="pt-3"></div>
 
-    <!-- <div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
-      <div class="card mx-auto" style="width: 95%">
-        <div class="card-body">
-          <a href="recipes.html" class="stretched-link"></a>
-          <h3 class="card-title">Cookies</h3>
-          <p
-            class="card-text text-muted"
-            style="margin-top: -7px; font-size: 12px"
-          >
-            Dessert
-          </p>
-        </div>
-      </div>
-    </div> -->
-<div class="content d-flex flex-column" style="margin-top: 60px; margin-bottom: 80px;">
-
+    <div class="content" style="margin-top: 60px; margin-bottom: 80px;">
+    
     <?php
-// Assuming you have already established a database connection
+            $id = $_GET['id'];
+            $r_sql = "SELECT *
+            FROM recipes
+            WHERE recipe_id = $id";
+            $r_result = mysqli_query($conn, $r_sql);
+            if($off_result) {
+            $num_rows = mysqli_num_rows($r_result);
+            if($num_rows > 0) {
+                while ($r_row = mysqli_fetch_assoc($r_result)) {
+                    $r_id             = $r_row['recipe_id']; 
+                    $r_title          = $r_row['title']; 
+                    $r_ingredients    = $r_row['ingredients'];
+                    $r_directions     = $r_row['directions'];
+                    $r_prep_time      = $r_row['prep_time'];
+                    $r_cook_time      = $r_row['cook_time'];
+                    $r_preheat_temp   = $r_row['preheat_temp'];
+                    $r_serves         = $r_row['serves'];
+                    $r_notes          = $r_row['notes'];
+                    $r_link           = $r_row['link'];
+                    $r_category       = $r_row['category'];
+                }
+              ?>
 
-// Query to select title and category from the recipes table
-$query = "SELECT title, category FROM recipes";
-$result = mysqli_query($conn, $query);
+              <h2>
+                <?php echo $r_title; ?>
+              </h2>
 
-// Check if query executed successfully
-if ($result) {
-    // Loop through the result set
-    while ($row = mysqli_fetch_assoc($result)) {
-        // Output the recipe in the desired format
-        echo '
-        
-            <div class="card mx-auto" style="width: 95%">
-                <div class="card-body">
-                    <a href="recipes.html?id=' . $row['recipe_id'] . '" class="stretched-link"></a>
-                    <h3 class="card-title">' . $row['title'] . '</h3>
-                    <p class="card-text text-muted" style="margin-top: -7px; font-size: 12px">' . $row['category'] . '</p>
-                </div>
-            </div>
-          ';
-    }
-} else {
-    // Handle error if query fails
-    echo "Error: " . mysqli_error($conn);
-}
 
-// Close database connection
-mysqli_close($connection);
-?>
-</div>
+<?php }
+        } ?>
+    
 
-    <!-- <div class="navbar">
+    </div>
+
+    <div class="navbar">
       <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-      <a href="#discover">Discover</a>
-      <a href="#favorites">Favorites</a>
-      <a href="#profile">Profile</a>
-    </div> -->
+      <!-- <a href="#discover">Discover</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#profile">Profile</a> -->
+    </div>
 
     <!-- bootstrap script -->
     <script
