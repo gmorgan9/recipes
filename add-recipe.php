@@ -65,8 +65,23 @@ foreach ($files as $file) {
                 <label for="title" class="form-label">Recipe Title</label>
                 <input type="text" class="form-control" id="title" name="title">
             </div>
-            
         </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="prep_time" class="form-label">Prep Time</label>
+                <input type="text" class="form-control" id="prep_time" name="prep_time">
+            </div>
+            <label for="asset_tag_no" class="form-label">Asset Tag Number</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="asset_tag_no" name="asset_tag_no">
+                <div class="input-group-text">M-</div>
+            </div>
+            <div class="col">
+                <label for="prep_time" class="form-label">Prep Time</label>
+                <input type="text" class="form-control" id="prep_time" name="prep_time">
+            </div>
+        </div>
+
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="ingredients">Ingredients</label>
