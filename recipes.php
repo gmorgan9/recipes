@@ -73,7 +73,7 @@ foreach ($files as $file) {
 
     <div class="pt-3"></div>
 
-    <div class="content" style="margin-top: 60px; margin-bottom: 50px;">
+    <div class="content" style="margin-top: 60px; margin-bottom: 50px; z-index: -999;">
             <?php
             $id = $_GET['id'];
             $r_sql = "SELECT * FROM recipes WHERE recipe_id = $id";
