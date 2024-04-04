@@ -13,7 +13,10 @@
     />
     <!-- <meta name="viewport" content="initial-scale = 1.0, user-scalable=no" /> -->
 
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+    <meta
+      name="viewport"
+      content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"
+    />
 
     <!-- end application meta -->
 
@@ -32,7 +35,7 @@
 
     <!-- custom styles -->
     <style>
-      .navbar {
+      /* .navbar {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -52,9 +55,10 @@
         padding: 10px 0;
         transition: background-color 0.3s ease;
       }
-      /* .navbar a:hover {
-        background-color: #ddd;
-      } */
+       */
+      .card:not(:last-child) {
+        margin-bottom: 15px; /* Adjust this value as needed */
+      }
     </style>
     <!-- end custom styles -->
 
@@ -64,6 +68,14 @@
     <h2
       class=""
       style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-around;
         text-align: center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         padding-bottom: 20px;
@@ -73,22 +85,41 @@
     </h2>
 
     <div class="pt-3"></div>
-    <div class="d-flex">
+
+    <div class="content d-flex flex-column" style="margin-top: 60px">
       <div class="card mx-auto" style="width: 95%">
-        <div class="card-body my-auto pb-2">
+        <div class="card-body">
           <a href="recipes.html" class="stretched-link"></a>
-          <h5 class="card-title float-start">Desserts</h5>
-          <p class="card-text float-end">1</p>
+          <h3 class="card-title">Cookies</h3>
+          <p
+            class="card-text text-muted"
+            style="margin-top: -7px; font-size: 12px"
+          >
+            Dessert
+          </p>
+        </div>
+      </div>
+
+      <div class="card mx-auto" style="width: 95%">
+        <div class="card-body">
+          <a href="#" class="stretched-link"></a>
+          <h3 class="card-title">Cookies</h3>
+          <p
+            class="card-text text-muted"
+            style="margin-top: -7px; font-size: 12px"
+          >
+            Dessert
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="navbar">
+    <!-- <div class="navbar">
       <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-      <!-- <a href="#discover">Discover</a>
+      <a href="#discover">Discover</a>
       <a href="#favorites">Favorites</a>
-      <a href="#profile">Profile</a> -->
-    </div>
+      <a href="#profile">Profile</a>
+    </div> -->
 
     <!-- bootstrap script -->
     <script
