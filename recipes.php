@@ -161,7 +161,7 @@ foreach ($files as $file) {
                     ?>
                   </div>
 
-                  <div>
+                  <div class="mt-3">
                     <h4>
                       Ingredients
                     </h4>
