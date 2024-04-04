@@ -127,6 +127,11 @@ foreach ($files as $file) {
                       echo $r_ingredients; 
                     ?>
                   </p>
+                  <p>
+                    <?php
+                      echo $r_directions; 
+                    ?>
+                  </p>
                 </div>
                 
 
