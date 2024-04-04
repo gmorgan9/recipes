@@ -127,7 +127,11 @@ foreach ($files as $file) {
                       echo $r_category; 
                     ?>
                     <?php
+                    if($r_preheat_temp = null) {
+                      echo "N/A";
+                    } else {
                       echo $r_preheat_temp . '&deg;F'; 
+                    }
                     ?>
                     <?php
                       echo $r_ingredients; 
