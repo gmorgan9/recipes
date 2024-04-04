@@ -100,8 +100,9 @@ foreach ($files as $file) {
                     <?php echo $r_title; ?>
                   </h3>
 
-                  <div class="recipe_details d-flex" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
+                  <div class="recipe_details d-flex mx-auto" style="border: 1.5px solid gray; padding: 5px; font-size: 12px;">
                     <p class="text-muted"><strong>Category: </strong><?php echo $r_category; ?></p>
+                    &nbsp; | &nbsp;
                     <p class="text-muted">
                     <strong>Prep: </strong>
                       <?php 
@@ -112,6 +113,7 @@ foreach ($files as $file) {
                       }
                       ?>
                     </p>
+                    <br>
                     <p class="text-muted">
                       <strong>Cook: </strong>
                       <?php 
@@ -122,6 +124,7 @@ foreach ($files as $file) {
                       }
                       ?>
                     </p>
+                    &nbsp; | &nbsp;
                     <p class="text-muted">
                       <strong>Preheat: </strong>
                       <?php 
